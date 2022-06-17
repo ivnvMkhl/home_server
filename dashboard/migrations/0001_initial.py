@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='SwitchDevice',
+            name='SwitchDevices',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('actual_name', models.CharField(max_length=30, verbose_name='Device name')),
@@ -29,7 +29,7 @@ class Migration(migrations.Migration):
                 ('location', models.CharField(blank=True, max_length=30, verbose_name='Locate')),
                 ('start_state', models.BooleanField(default=False, verbose_name='Start state')),
                 ('created_timestamp', models.DateTimeField(auto_now=True, verbose_name='Created date')),
-                ('grop', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='dashboard.groups')),
+                ('group', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='dashboard.groups')),
             ],
         ),
     ]
